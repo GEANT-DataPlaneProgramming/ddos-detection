@@ -1,0 +1,20 @@
+table_add ipv4_lpm ipv4_forward 10.0.1.1/32 => 00:00:00:00:01:01 2
+table_add ipv4_lpm ipv4_forward 10.0.2.2/32 => 00:00:00:00:02:02 3
+table_add ipv4_lpm ipv4_forward 10.0.3.3/32 => 00:00:00:00:03:03 1
+table_add count_zeros do_count_zeros 0x01&&&0x0001 => 1 1
+table_add count_zeros do_count_zeros 0x02&&&0x0003 => 2 2
+table_add count_zeros do_count_zeros 0x04&&&0x0007 => 3 3
+table_add count_zeros do_count_zeros 0x08&&&0xf => 4 4
+table_add count_zeros do_count_zeros 0x10&&&0x1f => 5 5
+table_add count_zeros do_count_zeros 0x20&&&0x3f => 6 6
+table_add count_zeros do_count_zeros 0x40&&&0x7f => 7 7
+table_add count_zeros do_count_zeros 0x80&&&0xff => 8 8
+table_add count_zeros do_count_zeros 0x100&&&0x1ff => 9 9
+table_add count_zeros do_count_zeros 0x200&&&0x3ff => 10 10
+table_add count_zeros do_count_zeros 0x400&&&0x7ff => 11 11
+table_add count_zeros do_count_zeros 0x800&&&0xfff => 12 12
+table_add count_zeros do_count_zeros 0x1000&&&0x1fff => 13 13
+table_add count_zeros do_count_zeros 0x2000&&&0x3fff => 14 14
+table_add count_zeros do_count_zeros 0x4000&&&0x7fff => 15 15
+table_add count_zeros do_count_zeros 0x8000&&&0xffff => 16 16
+
